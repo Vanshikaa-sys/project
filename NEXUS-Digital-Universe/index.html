@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS Digital Universe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="cosmos" id="cosmos">
+    <div class="starfield stars-a"></div>
+    <div class="starfield stars-b"></div>
+    <div class="nebula nebula-one"></div>
+    <div class="nebula nebula-two"></div>
+    <div class="mouse-trail" id="mouseTrail"></div>
+  </div>
+
+  <section class="entry" id="entry">
+    <div class="entry-ring"></div>
+    <div class="entry-copy">
+      <p class="eyebrow">Initializing 2050 Interface</p>
+      <h1>NEXUS</h1>
+      <p>Enter a living digital universe where every idea becomes a planet, portal, or energy node.</p>
+      <button class="primary-action" id="enterButton" type="button">Enter Universe</button>
+    </div>
+  </section>
+
+  <main class="universe" id="universe" aria-label="NEXUS interactive digital universe">
+    <header class="system-bar hologlass">
+      <a class="brand" href="#universe">NEXUS</a>
+      <nav aria-label="Universe controls">
+        <button class="nav-chip" data-focus="command" type="button">Command</button>
+        <button class="nav-chip" data-focus="timeline" type="button">Timeline</button>
+        <button class="nav-chip" data-focus="companion" type="button">Companion</button>
+      </nav>
+      <div class="system-actions">
+        <button class="icon-button" id="modeButton" type="button">Night</button>
+        <button class="icon-button" id="audioButton" type="button">Audio</button>
+      </div>
+    </header>
+
+    <section class="hero-orbit">
+      <div class="title-cloud" data-depth="0.08">
+        <p class="eyebrow">Digital Universe</p>
+        <h2>Not a website. A sci-fi operating system.</h2>
+        <p>Move your cursor, unlock nodes, trigger story fragments, and explore the NEXUS galaxy.</p>
+      </div>
+
+      <div class="orbit-stage" id="orbitStage">
+        <div class="energy-wave"></div>
+        <button class="node planet command" data-node="AI Command Center" data-key="command" data-depth="0.18" type="button">
+          <span>AI</span>
+        </button>
+        <button class="node portal memory" data-node="Digital Memory Vault" data-key="memory" data-depth="0.22" type="button">
+          <span>Vault</span>
+        </button>
+        <button class="node planet timeline" data-node="Future Timeline Explorer" data-key="timeline" data-depth="0.16" type="button">
+          <span>2050</span>
+        </button>
+        <button class="node liquid dream" data-node="Dream Generator" data-key="dream" data-depth="0.26" type="button">
+          <span>Dream</span>
+        </button>
+        <button class="node planet productivity" data-node="Productivity Galaxy" data-key="productivity" data-depth="0.13" type="button">
+          <span>Flow</span>
+        </button>
+        <button class="node portal knowledge" data-node="Knowledge Planet" data-key="knowledge" data-depth="0.2" type="button">
+          <span>Know</span>
+        </button>
+        <button class="node planet achievement" data-node="Achievement Universe" data-key="achievement" data-depth="0.24" type="button">
+          <span>XP</span>
+        </button>
+        <button class="node avatar-node companion" data-node="Personal AI Companion" data-key="companion" data-depth="0.17" type="button">
+          <span>AIva</span>
+        </button>
+        <button class="node portal dashboard" data-node="Holographic Dashboard" data-key="dashboard" data-depth="0.21" type="button">
+          <span>Dash</span>
+        </button>
+        <button class="node secret" data-node="Secret Easter Eggs" data-key="secret" data-depth="0.3" type="button">
+          <span>?</span>
+        </button>
+      </div>
+
+      <aside class="control-deck hologlass" data-depth="0.05">
+        <div class="panel-top">
+          <p class="eyebrow">Live Node</p>
+          <span id="signalStatus">Awaiting contact</span>
+        </div>
+        <h3 id="activeTitle">NEXUS Core</h3>
+        <p id="activeDescription">Select any floating planet or portal to open a holographic story panel.</p>
+        <div class="meter"><span id="signalMeter"></span></div>
+      </aside>
+    </section>
+
+    <section class="holo-grid">
+      <article class="holo-card hologlass reveal">
+        <p class="eyebrow">AI Command Center</p>
+        <h3>Issue imaginary commands.</h3>
+        <p>Generate mission prompts, decisions, and strategy fragments from the companion intelligence.</p>
+      </article>
+      <article class="holo-card hologlass reveal">
+        <p class="eyebrow">Future Timeline</p>
+        <h3>Jump between years.</h3>
+        <p>Explore simulated milestones, future plans, and cinematic progress checkpoints.</p>
+      </article>
+      <article class="holo-card hologlass reveal">
+        <p class="eyebrow">Achievement Universe</p>
+        <h3>Unlock hidden signals.</h3>
+        <p>Discover secrets by clicking nodes, toggling modes, and interacting with the galaxy.</p>
+      </article>
+    </section>
+  </main>
+
+  <aside class="ai-companion hologlass" id="aiCompanion">
+    <div class="avatar">
+      <div class="avatar-eye"></div>
+    </div>
+    <div>
+      <p class="eyebrow">AI Companion</p>
+      <p id="companionText">I am AIva. Enter the NEXUS and I will guide your first transmission.</p>
+    </div>
+  </aside>
+
+  <section class="modal hologlass hidden" id="nodeModal" aria-live="polite">
+    <button class="close-button" id="closeModal" type="button">Close</button>
+    <p class="eyebrow" id="modalEyebrow">Node Opened</p>
+    <h2 id="modalTitle">Node</h2>
+    <p id="modalBody">Details</p>
+    <div class="modal-actions">
+      <button class="primary-action" id="storyButton" type="button">Generate Story Pulse</button>
+      <button class="ghost-action" id="explodeButton" type="button">Particle Burst</button>
+    </div>
+  </section>
+
+  <aside class="achievement-toast hidden" id="achievementToast">
+    <strong id="achievementTitle">Achievement unlocked</strong>
+    <span id="achievementBody">Signal discovered.</span>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
